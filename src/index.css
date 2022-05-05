@@ -5,3 +5,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background: #f5f5f5;
+  /* Set a  Particles background */
+  background: url(https://images.unsplash.com/photo-1584034516663-ed3798816de4)
+    no-repeat center center fixed;
+}
