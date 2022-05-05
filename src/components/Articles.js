@@ -29,7 +29,6 @@ const Articles = () => {
             author={article.author}
             url={article.url}
             urlToImage={article.urlToImage}
-            publishedAt={article.publishedAt}
           />
         ))}
     </div>

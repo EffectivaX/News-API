@@ -2,7 +2,6 @@ import React from "react";
 import {
   Card,
   CardHeader,
-  Avatar,
   CardMedia,
   CardContent,
   Typography,
@@ -35,8 +34,7 @@ const Article = ({ title, description, author, url, urlToImage }) => {
           sx={{ textDecoration: "none", color: "white" }}
           component="a"
           variant="title"
-          // open in new tab
-          href={url || "#" || "javascript:void(0);"}
+          href={url}
           title={title}
         />
         <CardMedia
