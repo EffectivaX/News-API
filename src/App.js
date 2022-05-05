@@ -5,7 +5,7 @@ import ParticlesBg from "particles-bg";
 function App() {
   return (
     <div className="App">
-      <ParticlesBg type="cobweb" bg={true} />
+      <ParticlesBg type="polygon" bg={true} />
       <Articles />
     </div>
   );
