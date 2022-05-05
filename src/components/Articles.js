@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Article from "./Article";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
@@ -17,7 +18,21 @@ const Articles = () => {
     getArticles();
   }, []);
 
-  return <div>Articles</div>;
+  return (
+    <div>
+      {articles && articles.map((article, index) => (
+        <Article
+          key={index}
+          title={article.title}
+          description={article.description}
+          author={article.author}
+          url={article.url}
+          urlToImage={article.urlToImage}
+          publishedAt={article.publishedAt}
+        />
+      ))}
+    </div>
+  )
 };
 
 export default Articles;
