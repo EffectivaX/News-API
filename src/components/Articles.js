@@ -10,7 +10,7 @@ const Articles = () => {
   useEffect(() => {
     const getArticles = async () => {
       const res = await axios.get(
-        `https://newsapi.org/v2/everything?q=space&apiKey=${API_KEY}`
+        `https://newsapi.org/v2/everything?q=science&apiKey=${API_KEY}`
       );
       console.log(res);
       setArticles(res.data.articles);
@@ -29,6 +29,7 @@ const Articles = () => {
             author={article.author}
             url={article.url}
             urlToImage={article.urlToImage}
+            publishedAt={article.publishedAt}
           />
         ))}
     </div>

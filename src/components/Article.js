@@ -8,7 +8,14 @@ import {
 } from "@mui/material";
 import { useStyles } from "./utils";
 
-const Article = ({ title, description, author, url, urlToImage }) => {
+const Article = ({
+  title,
+  description,
+  author,
+  url,
+  urlToImage,
+  publishedAt,
+}) => {
   const classes = useStyles();
   return (
     <div>
@@ -37,6 +44,18 @@ const Article = ({ title, description, author, url, urlToImage }) => {
           href={url}
           title={title}
         />
+        <Typography
+          sx={{ textAlign: "left", color: "#fff", fontSize: "1rem" }}
+          variant="subtitle2"
+          color="textSecondary"
+          component="div"
+        >
+          {new Date(publishedAt).toLocaleDateString("en-US", {
+            month: "short",
+            day: "numeric",
+            year: "numeric",
+          })}
+        </Typography>
         <CardMedia
           className={classes.font}
           component="img"
